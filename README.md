@@ -1,5 +1,11 @@
 ## Hi there 
+Just an average researcher who enjoys learning about systems and ways to exploit them.
 
+More about me:
+- I'm currently working on creating a custom shellcode encoder / decoder.
+- I'm currently learning AI/ML engineering 🌐.
+- I love anime, manga, and coffee ☕. 
+- Fun Fact: Mikasa caused the rumbling...
 <!--
 **KazamaDono/KazamaDono** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
