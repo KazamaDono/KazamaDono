@@ -1,8 +1,7 @@
 ## Hi there 
-Just an average researcher who enjoys learning about systems and ways to exploit them.
-
 ![Ghost In The Shell - Typing on a keyboard](https://github.com/user-attachments/assets/8ef01e46-8d05-4996-8a18-abcf49d46551)
 
+Just an average researcher who enjoys learning about systems and ways to exploit them.
 
 More about me 🤔:
 - I'm currently working on creating a custom shellcode encoder / decoder.
