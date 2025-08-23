@@ -1,6 +1,4 @@
 ## Hi there 
-![download](https://github.com/user-attachments/assets/9e3e4122-4ffc-4f49-bf2d-f8df2325f279)
-
 Just an average researcher who enjoys learning about systems and ways to exploit them.
 
 More about me 🤔:
@@ -9,7 +7,12 @@ More about me 🤔:
 - I love anime, manga, and coffee ☕. 
 - Fun Fact: Mikasa caused the rumbling...
 
-<!-- ![Ghost In The Shell - Typing on a keyboard](https://github.com/user-attachments/assets/8ef01e46-8d05-4996-8a18-abcf49d46551)
+![AWAKEN AKIRA](https://github.com/user-attachments/assets/ac62deaa-4351-4759-b657-26d5e1e1f3df)
+![Hataraku Maou-sama! #gif](https://github.com/user-attachments/assets/360a7b2b-fed9-4c53-ae1a-ec287efd50f4)
+
+<!-- 
+![Ghost In The Shell - Typing on a keyboard](https://github.com/user-attachments/assets/8ef01e46-8d05-4996-8a18-abcf49d46551)
+![download](https://github.com/user-attachments/assets/9e3e4122-4ffc-4f49-bf2d-f8df2325f279)
 
 <!--
 **KazamaDono/KazamaDono** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
