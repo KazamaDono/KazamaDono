@@ -1,7 +1,7 @@
 ## Hi there 
 Just an average researcher who enjoys learning about systems and ways to exploit them.
 
-![gif](https://github.com/user-attachments/assets/bee841dd-30db-4c92-87d5-cf3f6e292092)
+![Ghost In The Shell - Typing on a keyboard](https://github.com/user-attachments/assets/8ef01e46-8d05-4996-8a18-abcf49d46551)
 
 
 More about me 🤔:
