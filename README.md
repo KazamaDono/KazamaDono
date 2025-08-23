@@ -1,6 +1,9 @@
 ## Hi there 
 Just an average researcher who enjoys learning about systems and ways to exploit them.
 
+![gif](https://github.com/user-attachments/assets/bee841dd-30db-4c92-87d5-cf3f6e292092)
+
+
 More about me 🤔:
 - I'm currently working on creating a custom shellcode encoder / decoder.
 - I'm currently learning AI/ML engineering 🌐.
