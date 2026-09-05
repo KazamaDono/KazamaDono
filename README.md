@@ -22,7 +22,7 @@ I break things to understand them, then build tools so machines can break them f
 ```
 
 Offensive security researcher and systems engineer focused on **automated vulnerability discovery**.  
-Currently building AI agents that find real bugs autonomously — not theoretical, reproducible.
+Currently building AI agents that find real bugs autonomously.
 
 <!-- TECH STACK -->
 ## `> ls /opt/toolkit/`
