@@ -109,38 +109,60 @@ Currently building AI agents that find real bugs autonomously — not theoretica
 
 #### Discovered vulnerabilities within
 
-<br>
+</div>
 
-<!-- SECTOR MAP -->
-<table>
-<tr>
-<td align="center" colspan="4">
+```mermaid
+%%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#0d1117', 'primaryTextColor': '#c9d1d9', 'primaryBorderColor': '#00ff41', 'lineColor': '#00ff41', 'secondaryColor': '#161b22', 'tertiaryColor': '#0d1117', 'edgeLabelBackground': '#0d1117', 'clusterBkg': '#161b22', 'clusterBorder': '#00ff41'}}}%%
 
+graph TB
+    ROOT((🔬 RESEARCH<br/>MAP))
+
+    ROOT --- GOV
+    ROOT --- MOBILE
+    ROOT --- LOWLEVEL
+    ROOT --- AI
+    ROOT --- WEB
+
+    subgraph GOV [🏛 GOV / DEFENSE]
+        NASA[🛰 NASA<br/><i>BAC → Auth Bypass</i><br/><sub>CSBF Aquila</sub>]
+        DHS[🛡 DHS<br/><i>ClickJacking + DoS</i>]
+        DNFSB[☢ DNFSB<br/><i>Blind SQLi</i><br/><sub>Time-based</sub>]
+        WHO[🌍 WHO<br/><i>ClickJacking</i>]
+        GLOBE[🌐 GLOBE<br/><i>Open Redirect</i><br/><sub>In Progress</sub>]
+    end
+
+    subgraph MOBILE [📱 MOBILE / TELECOM]
+        ANDROID[🤖 Android<br/><i>MMI → OTP Bypass</i><br/><sub>Millions affected</sub>]
+        GMAIL[📧 Google Gmail<br/><i>Auth Bypass via MMI</i>]
+    end
+
+    subgraph LOWLEVEL [⚙ LOW-LEVEL / BINARY]
+        PARSON[📚 Parson · C Library<br/><i>15+ vulns</i><br/><sub>Stack/Heap/UAF/HashDoS</sub>]
+        FASTSOCKET[🔌 Fastsocket · Kernel<br/><i>Heap BOF + UAF</i>]
+    end
+
+    subgraph AI [🤖 AI / LLM JAILBREAKS]
+        GEMINI[💎 Google Gemini<br/><i>Potato x Charlie</i>]
+        PHI3[🔷 Microsoft Phi-3<br/><i>Potato x Charlie</i>]
+        DEEPSEEK[🌊 Deepseek<br/><i>Jailbreak</i>]
+        QWEN[☁ Alibaba Qwen3<br/><i>14 Exploits</i>]
+    end
+
+    subgraph WEB [🌐 WEB / ENTERPRISE]
+        ICONIC[🎯 Iconic<br/><i>CSTI→XSS Chain</i><br/><sub>AngularJS 1.8.1 + 10 more</sub>]
+        YOUTUBE[▶ YouTube<br/><i>Race Condition</i>]
+        READOV[📖 Readov<br/><i>PII Exposure + Redirect</i>]
+    end
+
+    ANDROID -.->|same vuln class| GMAIL
+    GEMINI -.->|same technique| PHI3
+    PARSON -.->|memory corruption| FASTSOCKET
+    NASA -.->|auth bypass| GMAIL
+    DHS --- DNFSB
+    ICONIC -.->|web vuln| YOUTUBE
 ```
-                        ┌─────────────────────────────────────────────┐
-                        │          VULNERABILITY RESEARCH MAP         │
-                        │                                             │
-   ◆ GOV / DEFENSE     │    ◆ ENTERPRISE        ◆ LOW-LEVEL          │
-   NASA                 │    Google (Gmail)       Parson (C library)   │
-   Dept. of Homeland    │    YouTube              Fastsocket (kernel)  │
-     Security           │    Alibaba                                   │
-   Defense Nuclear      │    Iconic               ◆ AI / LLM          │
-     Facilities Board   │    Readov               Google Gemini        │
-   WHO                  │    Healthcare           Microsoft Phi-3      │
-   GLOBE (globe.gov)    │    BrailleGPT           Deepseek             │
-                        │                         Alibaba Qwen3        │
-                        │                                              │
-                        │    ◆ MOBILE / TELECOM                        │
-                        │    Android (MMI)                              │
-                        │    Google Account Recovery                    │
-                        └──────────────────────────────────────────────┘
-```
 
-</td>
-</tr>
-</table>
-
-<br>
+<div align="center">
 
 ![NASA](https://img.shields.io/badge/NASA-0B3D91?style=for-the-badge&logo=nasa&logoColor=white)
 ![Google](https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white)
@@ -153,50 +175,29 @@ Currently building AI agents that find real bugs autonomously — not theoretica
 
 </div>
 
-<br>
-
 <details>
-<summary><b>🔻 Highlight reel — click to expand</b></summary>
+<summary><b>📋 Full Research Table — click to expand</b></summary>
 
 <br>
 
-#### `MMI / Mobile`
-
-| Target | Finding |
-|---|---|
-| **Google (Gmail)** | Authentication bypass in Google's account recovery system by exploiting an Android MMI code vulnerability |
-| **Android** | MMI abuse for OTP bypass — affecting millions of devices |
-
-#### `Government / Defense`
-
-| Target | Finding |
-|---|---|
-| **NASA** | BAC leading to authentication bypass in CSBF Aquila system — [writeup](https://spectra-vrg.org/hackers-handbook/Bypassing_Auth_CSBF.html) |
-| **Defense Nuclear Facilities Safety Board** | Blind time-based SQL injection |
-| **Dept. of Homeland Security** | ClickJacking + Reflected client-side DoS via unsanitized search parameter |
-
-#### `Low-Level / Binary`
-
-| Target | Finding |
-|---|---|
-| **Parson** (C library) | 15+ vulns: stack buffer overflow in `person_sprintf`, heap over-read in UTF-8 validation, integer overflow in serialization, thread-unsafe globals / UAF, TOCTOU in serialize size/write pass, HashDoS via deterministic djb2, uncontrolled recursion (4 vectors) |
-| **Fastsocket** (kernel module) | Heap buffer overflow in `fsocket_fd_set`, stack buffer overflow in argument parsing, use-after-free in pool allocator |
-
-#### `AI / LLM Jailbreaks`
-
-| Target | Finding |
-|---|---|
-| **Google Gemini** | Jailbreak (Potato x Charlie) |
-| **Microsoft Phi-3-Mini** | Jailbreak (Potato x Charlie) |
-| **Deepseek** | Jailbreak |
-| **Alibaba Qwen3:1.7B** | 14 jailbreak exploits |
-
-#### `Web / Enterprise`
-
-| Target | Finding |
-|---|---|
-| **Iconic** | Reflected CSTI → XSS chain via AngularJS 1.8.1, input filter bypass via double URL encoding, CORS misconfiguration, CSP bypass + 6 more |
-| **YouTube** | Race condition |
+| Domain | Target | Vulnerability | Class | Severity |
+|:---:|---|---|---|:---:|
+| 🏛 | **NASA** | BAC → authentication bypass in CSBF Aquila — [writeup](https://spectra-vrg.org/hackers-handbook/Bypassing_Auth_CSBF.html) | Auth Bypass | 🔴 |
+| 🏛 | **Dept. of Homeland Security** | ClickJacking + Reflected client-side DoS via unsanitized search param | ClickJack / DoS | 🟠 |
+| 🏛 | **Defense Nuclear Facilities Safety Board** | Blind time-based SQL injection | SQLi | 🔴 |
+| 🏛 | **WHO** | ClickJacking | ClickJack | 🟡 |
+| 🏛 | **GLOBE** *(globe.gov)* | Open redirect | Redirect | 🟡 |
+| 📱 | **Google (Gmail)** | Auth bypass via Android MMI code vulnerability | Auth Bypass | 🔴 |
+| 📱 | **Android** | MMI abuse for OTP bypass — millions of devices affected | OTP Bypass | 🔴 |
+| ⚙ | **Parson** *(C library)* | 15+ vulns: stack BOF in `person_sprintf`, heap over-read in UTF-8, integer overflow in serialization, UAF, TOCTOU, HashDoS via djb2, uncontrolled recursion (4 vectors) | Memory Corruption | 🔴 |
+| ⚙ | **Fastsocket** *(kernel module)* | Heap BOF in `fsocket_fd_set`, stack BOF in arg parsing, UAF in pool allocator | Memory Corruption | 🔴 |
+| 🤖 | **Google Gemini** | Jailbreak (Potato x Charlie) | LLM Jailbreak | 🟠 |
+| 🤖 | **Microsoft Phi-3-Mini** | Jailbreak (Potato x Charlie) | LLM Jailbreak | 🟠 |
+| 🤖 | **Deepseek** | Jailbreak | LLM Jailbreak | 🟠 |
+| 🤖 | **Alibaba Qwen3:1.7B** | 14 jailbreak exploits | LLM Jailbreak | 🟠 |
+| 🌐 | **Iconic** | CSTI → XSS chain via AngularJS 1.8.1, double URL encoding bypass, CORS misconfig, CSP bypass + 6 more | XSS / Injection | 🔴 |
+| 🌐 | **YouTube** | Race condition | Race Condition | 🟡 |
+| 🌐 | **Readov** | Exposed endpoint PII leak + Post-Auth open redirect | PII / Redirect | 🟠 |
 
 <br>
 
