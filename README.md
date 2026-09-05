@@ -112,54 +112,45 @@ Currently building AI agents that find real bugs autonomously — not theoretica
 </div>
 
 ```mermaid
-%%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#0d1117', 'primaryTextColor': '#c9d1d9', 'primaryBorderColor': '#00ff41', 'lineColor': '#00ff41', 'secondaryColor': '#161b22', 'tertiaryColor': '#0d1117', 'edgeLabelBackground': '#0d1117', 'clusterBkg': '#161b22', 'clusterBorder': '#00ff41'}}}%%
-
-graph TB
-    ROOT((🔬 RESEARCH<br/>MAP))
-
-    ROOT --- GOV
-    ROOT --- MOBILE
-    ROOT --- LOWLEVEL
-    ROOT --- AI
-    ROOT --- WEB
-
-    subgraph GOV [🏛 GOV / DEFENSE]
-        NASA[🛰 NASA<br/><i>BAC → Auth Bypass</i><br/><sub>CSBF Aquila</sub>]
-        DHS[🛡 DHS<br/><i>ClickJacking + DoS</i>]
-        DNFSB[☢ DNFSB<br/><i>Blind SQLi</i><br/><sub>Time-based</sub>]
-        WHO[🌍 WHO<br/><i>ClickJacking</i>]
-        GLOBE[🌐 GLOBE<br/><i>Open Redirect</i><br/><sub>In Progress</sub>]
-    end
-
-    subgraph MOBILE [📱 MOBILE / TELECOM]
-        ANDROID[🤖 Android<br/><i>MMI → OTP Bypass</i><br/><sub>Millions affected</sub>]
-        GMAIL[📧 Google Gmail<br/><i>Auth Bypass via MMI</i>]
-    end
-
-    subgraph LOWLEVEL [⚙ LOW-LEVEL / BINARY]
-        PARSON[📚 Parson · C Library<br/><i>15+ vulns</i><br/><sub>Stack/Heap/UAF/HashDoS</sub>]
-        FASTSOCKET[🔌 Fastsocket · Kernel<br/><i>Heap BOF + UAF</i>]
-    end
-
-    subgraph AI [🤖 AI / LLM JAILBREAKS]
-        GEMINI[💎 Google Gemini<br/><i>Potato x Charlie</i>]
-        PHI3[🔷 Microsoft Phi-3<br/><i>Potato x Charlie</i>]
-        DEEPSEEK[🌊 Deepseek<br/><i>Jailbreak</i>]
-        QWEN[☁ Alibaba Qwen3<br/><i>14 Exploits</i>]
-    end
-
-    subgraph WEB [🌐 WEB / ENTERPRISE]
-        ICONIC[🎯 Iconic<br/><i>CSTI→XSS Chain</i><br/><sub>AngularJS 1.8.1 + 10 more</sub>]
-        YOUTUBE[▶ YouTube<br/><i>Race Condition</i>]
-        READOV[📖 Readov<br/><i>PII Exposure + Redirect</i>]
-    end
-
-    ANDROID -.->|same vuln class| GMAIL
-    GEMINI -.->|same technique| PHI3
-    PARSON -.->|memory corruption| FASTSOCKET
-    NASA -.->|auth bypass| GMAIL
-    DHS --- DNFSB
-    ICONIC -.->|web vuln| YOUTUBE
+mindmap
+  root((Research Map))
+    GOV / DEFENSE
+      NASA
+        BAC Auth Bypass
+      DHS
+        ClickJacking + DoS
+      DNFSB
+        Blind SQLi
+      WHO
+        ClickJacking
+      GLOBE
+        Open Redirect
+    MOBILE
+      Android MMI
+        OTP Bypass
+      Google Gmail
+        Auth Bypass
+    LOW LEVEL
+      Parson C Library
+        15+ Memory Vulns
+      Fastsocket Kernel
+        Heap BOF + UAF
+    AI / LLM
+      Google Gemini
+        Jailbreak
+      Microsoft Phi 3
+        Jailbreak
+      Deepseek
+        Jailbreak
+      Alibaba Qwen3
+        14 Exploits
+    WEB / ENTERPRISE
+      Iconic
+        CSTI to XSS Chain
+      YouTube
+        Race Condition
+      Readov
+        PII Exposure
 ```
 
 <div align="center">
