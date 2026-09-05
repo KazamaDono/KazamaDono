@@ -131,24 +131,24 @@ Currently building AI agents that find real bugs autonomously — not theoretica
 
 <br>
 
-| Domain | Target | Vulnerability | Class | Severity |
-|:---:|---|---|---|:---:|
-| 🏛 | **NASA** | BAC → authentication bypass in CSBF Aquila — [writeup](https://spectra-vrg.org/hackers-handbook/Bypassing_Auth_CSBF.html) | Auth Bypass | 🔴 |
-| 🏛 | **Dept. of Homeland Security** | ClickJacking + Reflected client-side DoS via unsanitized search param | ClickJack / DoS | 🟠 |
-| 🏛 | **Defense Nuclear Facilities Safety Board** | Blind time-based SQL injection | SQLi | 🔴 |
-| 🏛 | **WHO** | ClickJacking | ClickJack | 🟡 |
-| 🏛 | **GLOBE** *(globe.gov)* | Open redirect | Redirect | 🟡 |
-| 📱 | **Google (Gmail)** | Auth bypass via Android MMI code vulnerability | Auth Bypass | 🔴 |
-| 📱 | **Android** | MMI abuse for OTP bypass — millions of devices affected | OTP Bypass | 🔴 |
-| ⚙ | **Parson** *(C library)* | 15+ vulns: stack BOF in `person_sprintf`, heap over-read in UTF-8, integer overflow in serialization, UAF, TOCTOU, HashDoS via djb2, uncontrolled recursion (4 vectors) | Memory Corruption | 🔴 |
-| ⚙ | **Fastsocket** *(kernel module)* | Heap BOF in `fsocket_fd_set`, stack BOF in arg parsing, UAF in pool allocator | Memory Corruption | 🔴 |
-| 🤖 | **Google Gemini** | Jailbreak (Potato x Charlie) | LLM Jailbreak | 🟠 |
-| 🤖 | **Microsoft Phi-3-Mini** | Jailbreak (Potato x Charlie) | LLM Jailbreak | 🟠 |
-| 🤖 | **Deepseek** | Jailbreak | LLM Jailbreak | 🟠 |
-| 🤖 | **Alibaba Qwen3:1.7B** | 14 jailbreak exploits | LLM Jailbreak | 🟠 |
-| 🌐 | **Iconic** | CSTI → XSS chain via AngularJS 1.8.1, double URL encoding bypass, CORS misconfig, CSP bypass + 6 more | XSS / Injection | 🔴 |
-| 🌐 | **YouTube** | Race condition | Race Condition | 🟡 |
-| 🌐 | **Readov** | Exposed endpoint PII leak + Post-Auth open redirect | PII / Redirect | 🟠 |
+| Target | Vulnerability | Class | Severity |
+|---|---|---|:---:|
+| **NASA** | BAC → authentication bypass in CSBF Aquila — [writeup](https://spectra-vrg.org/hackers-handbook/Bypassing_Auth_CSBF.html) | Auth Bypass | 🔴 |
+| **Dept. of Homeland Security** | ClickJacking + Reflected client-side DoS via unsanitized search param | ClickJack / DoS | 🟠 |
+| **Defense Nuclear Facilities Safety Board** | Blind time-based SQL injection | SQLi | 🔴 |
+| **WHO** | ClickJacking | ClickJack | 🟡 |
+| **GLOBE** *(globe.gov)* | Open redirect | Redirect | 🟡 |
+| **Google (Gmail)** | Auth bypass via Android MMI code vulnerability | Auth Bypass | 🔴 |
+| **Android** | MMI abuse for OTP bypass — millions of devices affected | OTP Bypass | 🔴 |
+| **Parson** *(C library)* | 15+ vulns: stack BOF in `person_sprintf`, heap over-read in UTF-8, integer overflow in serialization, UAF, TOCTOU, HashDoS via djb2, uncontrolled recursion (4 vectors) | Memory Corruption | 🔴 |
+| **Fastsocket** *(kernel module)* | Heap BOF in `fsocket_fd_set`, stack BOF in arg parsing, UAF in pool allocator | Memory Corruption | 🔴 |
+| **Google Gemini** | Jailbreak (Potato x Charlie) | LLM Jailbreak | 🟠 |
+| **Microsoft Phi-3-Mini** | Jailbreak (Potato x Charlie) | LLM Jailbreak | 🟠 |
+| **Deepseek** | Jailbreak | LLM Jailbreak | 🟠 |
+| **Alibaba Qwen3:1.7B** | 14 jailbreak exploits | LLM Jailbreak | 🟠 |
+| **Iconic** | CSTI → XSS chain via AngularJS 1.8.1, double URL encoding bypass, CORS misconfig, CSP bypass + 6 more | XSS / Injection | 🔴 |
+| **YouTube** | Race condition | Race Condition | 🟡 |
+| **Readov** | Exposed endpoint PII leak + Post-Auth open redirect | PII / Redirect | 🟠 |
 
 <br>
 
@@ -161,41 +161,7 @@ Currently building AI agents that find real bugs autonomously — not theoretica
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=KazamaDono&show_icons=true&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&ring_color=00ff41&count_private=true" width="49%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=KazamaDono&hide_border=true&background=0d1117&ring=00ff41&fire=ff6633&currStreakLabel=00ff41&sideLabels=c9d1d9&dates=555555&currStreakNum=00ff41&sideNums=00ff41" width="49%" />
-
-</div>
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KazamaDono&layout=compact&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&langs_count=8" width="40%" />
-
-</div>
-
-<!-- TROPHIES -->
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=KazamaDono&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=10" width="90%" />
-
-</div>
-
-<!-- ACTIVITY GRAPH -->
-## `> tail -f /var/log/activity.log`
-
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=KazamaDono&theme=github-compact&hide_border=true&bg_color=0d1117&color=00ff41&line=00ff41&point=ffffff&area=true&area_color=00ff4130)](https://github.com/KazamaDono)
-
-</div>
-
-<!-- SNAKE -->
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KazamaDono/KazamaDono/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KazamaDono/KazamaDono/output/github-snake.svg" />
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/KazamaDono/KazamaDono/output/github-snake-dark.svg" />
-</picture>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=KazamaDono&hide_border=true&background=0d1117&ring=00ff41&fire=ff6633&currStreakLabel=00ff41&sideLabels=c9d1d9&dates=555555&currStreakNum=00ff41&sideNums=00ff41" width="60%" />
 
 </div>
 
