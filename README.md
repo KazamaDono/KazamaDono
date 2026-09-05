@@ -109,51 +109,11 @@ Currently building AI agents that find real bugs autonomously — not theoretica
 
 #### Discovered vulnerabilities within
 
-</div>
+<br>
 
-```mermaid
-mindmap
-  root((Research Map))
-    GOV / DEFENSE
-      NASA
-        BAC Auth Bypass
-      DHS
-        ClickJacking + DoS
-      DNFSB
-        Blind SQLi
-      WHO
-        ClickJacking
-      GLOBE
-        Open Redirect
-    MOBILE
-      Android MMI
-        OTP Bypass
-      Google Gmail
-        Auth Bypass
-    LOW LEVEL
-      Parson C Library
-        15+ Memory Vulns
-      Fastsocket Kernel
-        Heap BOF + UAF
-    AI / LLM
-      Google Gemini
-        Jailbreak
-      Microsoft Phi 3
-        Jailbreak
-      Deepseek
-        Jailbreak
-      Alibaba Qwen3
-        14 Exploits
-    WEB / ENTERPRISE
-      Iconic
-        CSTI to XSS Chain
-      YouTube
-        Race Condition
-      Readov
-        PII Exposure
-```
+<img src="radar.svg" alt="Research Coverage Radar" width="500" />
 
-<div align="center">
+<br>
 
 ![NASA](https://img.shields.io/badge/NASA-0B3D91?style=for-the-badge&logo=nasa&logoColor=white)
 ![Google](https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white)
