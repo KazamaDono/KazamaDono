@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HEADER -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=30&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=%24+sudo+./kazamadono;Security+Researcher+%7C+Systems+Engineer+%7C+Exploit+Dev" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=80&lines=%24+sudo+./kazamadono;Security+Researcher+%7C+Systems+Engineer+%7C+Exploit+Dev" alt="Typing SVG" />
 
 <br>
 
@@ -23,6 +23,121 @@ I break things to understand them, then build tools so machines can break them f
 
 Offensive security researcher and AI/ML engineer focused on **automated vulnerability discovery**.  
 Currently building AI agents that find real bugs autonomously — not theoretical, reproducible.
+
+<!-- RESEARCH -->
+## `> cat /var/log/research.log`
+
+Vulnerability research across government, enterprise, and open-source targets. Highlights below — full list is longer.
+
+#### Acknowledged by
+
+<div align="center">
+
+![NASA](https://img.shields.io/badge/NASA-0B3D91?style=for-the-badge&logo=nasa&logoColor=white)
+![Google](https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Microsoft](https://img.shields.io/badge/Microsoft-5E5E5E?style=for-the-badge&logo=microsoft&logoColor=white)
+![DHS](https://img.shields.io/badge/Dept._of_Homeland_Security-003366?style=for-the-badge&logo=homeland&logoColor=white)
+![DNFSB](https://img.shields.io/badge/Defense_Nuclear_Facilities-1a1a2e?style=for-the-badge&logoColor=white)
+![WHO](https://img.shields.io/badge/World_Health_Org-0093D5?style=for-the-badge&logo=who&logoColor=white)
+![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+
+</div>
+
+<br>
+
+<table>
+<tr>
+<th>Target</th>
+<th>Finding</th>
+<th>Class</th>
+</tr>
+
+<!-- MMI / MOBILE -->
+<tr>
+<td><b>Google (Gmail)</b></td>
+<td>Authentication bypass in Google's account recovery system by exploiting an Android MMI code vulnerability</td>
+<td><img src="https://img.shields.io/badge/MMI-ff0000?style=flat-square" /></td>
+</tr>
+<tr>
+<td><b>Android</b></td>
+<td>MMI abuse for OTP bypass — affecting millions of devices</td>
+<td><img src="https://img.shields.io/badge/MMI-ff0000?style=flat-square" /></td>
+</tr>
+
+<!-- GOV / HIGH-PROFILE -->
+<tr>
+<td><b>NASA</b></td>
+<td>BAC leading to authentication bypass (CSBF Aquila system) — <a href="https://spectra-vrg.org/hackers-handbook/Bypassing_Auth_CSBF.html">writeup</a></td>
+<td><img src="https://img.shields.io/badge/Auth_Bypass-ff6633?style=flat-square" /></td>
+</tr>
+<tr>
+<td><b>Defense Nuclear Facilities Safety Board</b></td>
+<td>Blind time-based SQL injection</td>
+<td><img src="https://img.shields.io/badge/SQLi-cc0000?style=flat-square" /></td>
+</tr>
+<tr>
+<td><b>Dept. of Homeland Security</b></td>
+<td>ClickJacking + Reflected client-side DoS via unsanitized search parameter</td>
+<td><img src="https://img.shields.io/badge/Web-ff6633?style=flat-square" /></td>
+</tr>
+
+<!-- LOW-LEVEL: PARSON -->
+<tr>
+<td><b>Parson (C library)</b></td>
+<td>15+ vulns: stack buffer overflow in <code>person_sprintf</code>, heap over-read in UTF-8 validation, integer overflow in serialization, thread-unsafe globals / UAF, TOCTOU in serialize size/write pass, HashDoS via deterministic djb2, uncontrolled recursion (4 vectors)</td>
+<td><img src="https://img.shields.io/badge/Low--Level-8b00ff?style=flat-square" /></td>
+</tr>
+
+<!-- LOW-LEVEL: FASTSOCKET -->
+<tr>
+<td><b>Fastsocket (kernel module)</b></td>
+<td>Heap buffer overflow in <code>fsocket_fd_set</code>, stack buffer overflow in argument parsing, use-after-free in pool allocator</td>
+<td><img src="https://img.shields.io/badge/Low--Level-8b00ff?style=flat-square" /></td>
+</tr>
+
+<!-- AI / JAILBREAKS -->
+<tr>
+<td><b>Google Gemini</b></td>
+<td>Jailbreak (Potato x Charlie)</td>
+<td><img src="https://img.shields.io/badge/AI-00bfff?style=flat-square" /></td>
+</tr>
+<tr>
+<td><b>Microsoft Phi-3-Mini</b></td>
+<td>Jailbreak (Potato x Charlie)</td>
+<td><img src="https://img.shields.io/badge/AI-00bfff?style=flat-square" /></td>
+</tr>
+<tr>
+<td><b>Deepseek</b></td>
+<td>Jailbreak</td>
+<td><img src="https://img.shields.io/badge/AI-00bfff?style=flat-square" /></td>
+</tr>
+<tr>
+<td><b>Alibaba Qwen3:1.7B</b></td>
+<td>14 jailbreak exploits</td>
+<td><img src="https://img.shields.io/badge/AI-00bfff?style=flat-square" /></td>
+</tr>
+
+<!-- WEB -->
+<tr>
+<td><b>Iconic</b></td>
+<td>Reflected CSTI → XSS chain via AngularJS 1.8.1, input filter bypass via double URL encoding, CORS misconfiguration, CSP bypass + 6 more</td>
+<td><img src="https://img.shields.io/badge/Web-ff6633?style=flat-square" /></td>
+</tr>
+<tr>
+<td><b>YouTube</b></td>
+<td>Race condition</td>
+<td><img src="https://img.shields.io/badge/Web-ff6633?style=flat-square" /></td>
+</tr>
+</table>
+
+<br>
+
+<div align="center">
+
+*...and more across healthcare, education, and enterprise targets.*
+
+</div>
 
 <!-- TECH STACK -->
 ## `> ls /opt/toolkit/`
@@ -97,33 +212,6 @@ Currently building AI agents that find real bugs autonomously — not theoretica
 <sub>Automated scanner for UI-based authentication bypass in web applications.</sub>
 
 `selenium` `bypass` `auth` `scanner`
-
-</td>
-</tr>
-<tr>
-<td align="center" width="33%">
-
-<a href="https://github.com/0x4m4/hexstrike-ai">
-<img src="https://img.shields.io/badge/HEXSTRIKE--AI-0d1117?style=for-the-badge&logo=matrix&logoColor=00ff41" />
-</a>
-
-**AI Pentest Framework**  
-<sub>AI-powered penetration testing with MCP integration and 100+ security tools.</sub>
-
-`mcp` `ai-agents` `pentest` `recon`
-
-</td>
-<td align="center" colspan="2">
-
-```
- ┌──────────────────────────────────────────────────────┐
- │  Focus areas:                                        │
- │    → Web app pentesting & exploit development        │
- │    → AI-augmented vulnerability discovery            │
- │    → Shellcode engineering & binary exploitation     │
- │    → Reconnaissance automation at scale              │
- └──────────────────────────────────────────────────────┘
-```
 
 </td>
 </tr>
