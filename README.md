@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HEADER -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=30&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=%24+sudo+./kazamadono;Security+Researcher+%7C+AI+Engineer+%7C+Exploit+Dev" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=30&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=%24+sudo+./kazamadono;Security+Researcher+%7C+Systems+Engineer+%7C+Exploit+Dev" alt="Typing SVG" />
 
 <br>
 
